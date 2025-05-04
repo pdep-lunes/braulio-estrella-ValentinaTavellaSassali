@@ -4,19 +4,24 @@ data Personaje = Personaje {
     superPower :: String,
     poderActivo :: Bool,
     cantidadDeVida :: Int
-}
+} deriving (Show)
 
 personajeEspina :: Personaje
-personajeEspina unPersonaje = unPersonaje {
+personajeEspina = Personaje {
     nombre = "Espina",
     basicPower = "bolaEspinosa",
     superPower = "granadaDeEspinas",
     poderActivo = False,
-    cantidadDeVida = 1000
+    cantidadDeVida = 10000
 }
 
-vidaDePersonaje :: Personaje -> Int
-vidaDePersonaje unPersonaje = unPersonaje.cantidadDeVida
+personajePamela :: Personaje
+personajePamela = Personaje {
+    nombre = "Pamela",
+    basicPower = "lluviaDeTuercas",
+    superPower = "torretaCurativa",
+    poderActivo = False,
+    cantidadDeVida = 10000
+}
 
-bolaEspinosa :: Personaje -> Personaje
-bolaEspinosa unPersonaje = 
+
